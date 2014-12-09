@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Golumenov Andrey test task</title>
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/ag_rotator.js"></script>
+        <script src="js/init.js"></script>
+        <link type="text/css" href="css/ag_rotator.css" rel="stylesheet">
+        <link type="text/css" href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
+    <div id="ag_rotator">
+        <img src="images/1.jpg" data-custom-event="alert('1');">
+        <img src="images/2.jpg" data-custom-event="alert('2');">
+        <img src="images/3.jpg" data-custom-event="alert('3');">
+        <img src="images/4.jpg" data-custom-event="alert('4');">
+        <img src="images/5.jpg" data-custom-event="alert('5');">
+        <img src="images/6.jpg" data-custom-event="alert('6');">
+    </div>
+    <div id="ag_rotator1">
+        <img src="images/1.jpg" data-custom-event="alert('1');">
+        <img src="images/2.jpg" data-custom-event="alert('2');">
+        <img src="images/3.jpg" data-custom-event="alert('3');">
+        <img src="images/4.jpg" data-custom-event="alert('4');">
+        <img src="images/5.jpg" data-custom-event="alert('5');">
+        <img src="images/6.jpg" data-custom-event="alert('6');">
+    </div>
+    <div id="ag_rotator2">
+        <img src="images/1.jpg" data-custom-event="alert('1');">
+        <img src="images/2.jpg" data-custom-event="alert('2');">
+        <img src="images/3.jpg" data-custom-event="alert('3');">
+        <img src="images/4.jpg" data-custom-event="alert('4');">
+        <img src="images/5.jpg" data-custom-event="alert('5');">
+        <img src="images/6.jpg" data-custom-event="alert('6');">
+    </div>
+    <div id="ag_rotator3">
+        <img src="images/1.jpg" data-custom-event="alert('1');">
+        <img src="images/2.jpg" data-custom-event="alert('2');">
+        <img src="images/3.jpg" data-custom-event="alert('3');">
+        <img src="images/4.jpg" data-custom-event="alert('4');">
+        <img src="images/5.jpg" data-custom-event="alert('5');">
+        <img src="images/6.jpg" data-custom-event="alert('6');">
+    </div>
+    <div class="container">
+        <h1>Jquery rotator library</h1>
+        <h3>Implementation</h3>
+        <pre>
+// Define settings
+var settings={position: 'left'};
+// Define click event
+var customEvent=function(currentIndex){
+    alert('Show image #'+currentIndex);
+}
+// Use plugin
+$('#ag_rotator').ag_rotator(settings,customEvent)
+        // Plugin supports the call chain
+        .find('img').each(function(element,index){
+        $(this).css('border','1px solid #ffffff');
+});</pre>
+    </div>
+    </body>
+</html>
